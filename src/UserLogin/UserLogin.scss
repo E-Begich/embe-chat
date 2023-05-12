@@ -1,0 +1,84 @@
+$primary-color: #5d5b8d;
+
+.container {
+    background-color: #adafb6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .formWrapper {
+      background-color: white;
+      padding: 30px 60px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  
+      .logo {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 24px;
+  
+      }
+  
+      .title {
+        color: $primary-color;
+        font-size: 18px;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        input {
+          padding: 10px;
+          border: none;
+          width: 250px;
+          border: 1px solid;
+          border-radius: 5px;
+          &::placeholder {
+            color: $primary-color;
+          }
+        }
+  
+        button {
+          background-color: $primary-color;
+          color: white;
+          padding: 10px;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+        }
+  
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: $primary-color;
+          font-size: 15px;
+          cursor: pointer;
+        }
+
+        .formAvatar {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          width: 70px;
+          align-self: center;
+        }
+    }
+}
+.error {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 170px;
+  color: $primary-color;
+  align-self: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+}
