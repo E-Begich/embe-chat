@@ -46,6 +46,7 @@ class Chat extends React.Component {
       const room = this.drone.subscribe("observable-room");
       console.log('Room subscribed');
 
+
       room.on('data', (data, member) => {
         const messages = this.state.messages;
         messages.push({member, text: data});
@@ -70,8 +71,8 @@ class Chat extends React.Component {
 
   render() {
     return (
-        <div className="home">
-          <Header 
+      <div id="Home">
+        <Header 
           userName={headerUserName} 
           member={this.state.member} 
           logout={this.handleOnUserLogout} 
@@ -80,7 +81,7 @@ class Chat extends React.Component {
          {
             (this.state.member.id) ? 
             (
-                <div className="chatlist">
+            <div>
               <MessageList
                 messages={this.state.messages}
                 currentMember={this.state.member}
@@ -93,18 +94,14 @@ class Chat extends React.Component {
             </div>
             ) :
             (
-              <div>
-                <div className='LoginImage'>
-                  <div className='Logo'>
-                  </div>
-                </div>
+
                 <UserLogin onUserLogin={this.handleOnUserLogin}/>
-              </div>
+
             )
           }
 
       </div>
-
+      
     );
   }
 

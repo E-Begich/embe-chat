@@ -1,0 +1,43 @@
+$primary-color: #5d5b8d;
+
+#header-div {
+    background-color: #2f2d52;
+    overflow: visible;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    display: block;
+
+
+
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+
+      border: none;
+      margin-left: 2%;
+      margin-bottom: 10px;
+    }
+
+    .welcome-message {
+      font-weight: bold;
+      font-size: 30px;
+      margin-right: 10px;
+      text-align: right;
+      
+    }
+
+    #Logo2 {
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 30px;
+      width: 20%;
+      margin-left: 10px;
+      text-align: left;
+}
+  }

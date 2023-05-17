@@ -1,4 +1,5 @@
 import React from 'react';
+import "./MessageSent.scss";
 
 class SendMessage extends React.Component {
   state = {
@@ -22,16 +23,17 @@ class SendMessage extends React.Component {
   
   render() {
     return (
-      <div className="Input">
+      <div className="Input" id='Input2'>
         <form className='Send-Message' onSubmit={e => this.onSubmit(e)}>
           <input
+          id='messageText'
             onChange={e => this.onChange(e)}
             value={this.state.text}
             type="text"
-            placeholder="Enter your message and press ENTER"
+            placeholder="Enter your message..."
             autoFocus={true}
           />
-          <button>Send</button>
+          <button id='buttonSend'>Send</button>
         </form>
       </div>
     );
