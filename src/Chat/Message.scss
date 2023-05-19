@@ -19,16 +19,12 @@ $primary-color: #5d5b8d;
   }
   
   .Message-content > .text {
-    padding: 10px;
+    padding: 15px;
     max-width: 400px;
     margin: 0;
     border-radius: 10px 20px;
     background-color: cornflowerblue;
     color: white;
     display: inline-block;
-  }
-  
-  .currentMember > .Message-content .text {
-    background-color: orangered;
   }
   

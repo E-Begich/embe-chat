@@ -17,7 +17,7 @@ function randomColor() {
 class Chat extends React.Component {
   state = {
     messages: [],
-    members: [],
+    members:{ online:[]},
     member: {
       username: '',
       color: '',
@@ -58,11 +58,8 @@ class Chat extends React.Component {
   
       });
        room.on('members', m => {
-       
-      //  const members = this.state.member;
-      //  members.push({m})
-      //  this.setState({members});
-
+      // members.online =m;
+       //this.setState(members)
        console.log(m);
        })
 
