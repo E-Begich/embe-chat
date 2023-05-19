@@ -18,4 +18,10 @@ Once when you write the username and push enter or click on the Sign in button y
 **Technologies used in project:**
 * ReactJs
 * Scaledrone
+
+**Languages used:**
+* HTML
+* SCSS (CSS)
+* JavaScript
+
  
