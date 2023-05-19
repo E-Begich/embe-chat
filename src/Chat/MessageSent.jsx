@@ -1,19 +1,21 @@
 import React from 'react';
 import "./MessageSent.scss";
 
-class SendMessage extends React.Component {
+class MessageSent extends React.Component {
   state = {
-    text: ""
+    text: "",
+    error: "",
   }
 
   onSubmit(e) {
     e.preventDefault();
     if (this.state.text !== ''){
       this.props.onSendMessage(this.state.text);
-      this.setState({text: ""});
+      this.setState({text: "", error: null});
       }
       else {
-        console.log('Cannot be empty');
+        //console.log('Cannot be empty');
+        this.setState({error: "Cannot be empty"});
       }
   }
   
@@ -23,8 +25,9 @@ class SendMessage extends React.Component {
   
   render() {
     return (
-      <div className="Input" id='Input2'>
+      <div className="Input" id='Input2'> 
         <form className='Send-Message' onSubmit={e => this.onSubmit(e)}>
+            <div className="error2">{this.state.error}</div> 
           <input
           id='messageText'
             onChange={e => this.onChange(e)}
@@ -34,10 +37,12 @@ class SendMessage extends React.Component {
             autoFocus={true}
           />
           <button id='buttonSend'>Send</button>
+
+          
         </form>
       </div>
     );
   }  
 }
 
-export default SendMessage;
+export default MessageSent;
