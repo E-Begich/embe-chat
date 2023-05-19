@@ -1,24 +1,24 @@
 $primary-color: #5d5b8d;
 
-.Messages-message {
+.Message{
     display: flex;
     margin-top: 10px;
   }
   
-  .Messages-message.currentMember {
+  .Message.currentMember {
     justify-content: flex-end;
     flex-direction: row;
     text-align: right;
   }
   
-  .Message-content > .username {
+  .Message-text > .username {
     display: block;
     color: $primary-color;
     font-size: 15px;
     padding-bottom: 1px;
   }
   
-  .Message-content > .text {
+  .Message-text > .text {
     padding: 15px;
     max-width: 400px;
     margin: 0;
