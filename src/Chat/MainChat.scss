@@ -1,4 +1,4 @@
-$primary-color: #5d5b8d;
+
 
 #Home {
         display: flex;
@@ -7,65 +7,4 @@ $primary-color: #5d5b8d;
         height: 100vh;
 }
 
-#Navbar {
-        flex: 1;
-        position: relative;
-        border: 1px solid #2f2d52;
-        display: flex;
-        align-items: center;
-        background-color: #2f2d52;
-        height: 50px;
-        padding: 10px;
-        justify-content: space-between;
-        color: #ddddf7;
-}
 
-#Logo {
-        color: $primary-color;
-        font-weight: bold;
-        font-size: 24px;
-  
-}
-    
-#User-header {
-        padding: 10px;
-        width: 170px;
-        display: flex;
-        justify-content: space-between;
-}
-
-#ChatForm{
-        background-color: white;
-        border: 1px solid black;
-        width: 75%;
-        height: 100%;
-        right: 0;
-        top: 73px;
-        display: flex;
-        overflow: hidden;
-        position: absolute;
-}
-
-#ChatList-messages {
-    background-color: rgb(241, 253, 253);
-    border: #2f2d52;
-    width: 100%;
-    height: 80%;
-    left: 5px;
-    top: 2px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-}
-
-#ChatList-input {
-    background-color: #2f2d52;
-    border: #2f2d52;
-    width: 75%;
-    height: 10%;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-}

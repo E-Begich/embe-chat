@@ -1,6 +1,7 @@
 .Messages-list {
     padding: 10px 0;
     width: 90%;
+ 
     max-height: 60vh;
     margin: 0 auto;
     list-style: none;
@@ -11,5 +12,6 @@
     overflow: auto;
     position: static;
     padding: 30px 60px 90px;
+    border: 1px solid black;
 
   }

@@ -3,6 +3,7 @@ import UserLogin from "../UserLogin/UserLogin";
 import MessageList from "./MessageList";
 import Header from "./ChatHeader";
 import MessageSent from "./MessageSent";
+import OnlineMember from "./OnlineMember";
 import "./MainChat.scss";
 
 
@@ -17,7 +18,7 @@ function randomColor() {
 class Chat extends React.Component {
   state = {
     messages: [],
-    members:{ online:[]},
+    members:[],
     member: {
       username: '',
       color: '',
@@ -57,11 +58,20 @@ class Chat extends React.Component {
         console.log('Message sent');
   
       });
-       room.on('members', m => {
-      // members.online =m;
-       //this.setState(members)
-       console.log(m);
+       room.on('members', (members) => {
+       this.setState({members});
        })
+       room.on("member_join", (member) => {
+        const memberList = this.state.members;
+        memberList.push(member);
+        this.setState({ members: memberList });
+      });
+      room.on("member_leave", (member) => {
+        const memberLeave = this.state.members.filter(
+          (memberState) => memberState.id !== member.id
+        );
+        this.setState({ members: memberLeave });
+      });
 
     }
     else {
@@ -89,6 +99,16 @@ class Chat extends React.Component {
             (this.state.member.id) ? 
             (
             <div>
+              
+                 {this.state.members.map((member) => {
+              return (
+                <OnlineMember
+                  key={member.id}
+                  name={member.clientData.username}
+                  color={member.clientData.color}
+                />
+              );
+            })}
               <MessageList
                 messages={this.state.messages}
                 currentMember={this.state.member}
@@ -97,7 +117,6 @@ class Chat extends React.Component {
                 onSendMessage={this.onSendMessage}
                 onUserLogout={this.handleOnUserLogout}
               />
-              {/* {this.state.members} */}
             </div>
             ) :
             (
