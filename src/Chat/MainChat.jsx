@@ -1,9 +1,9 @@
 import React from "react";
 import UserLogin from "../UserLogin/UserLogin";
-import MessageList from "./MessageList";
-import Header from "./ChatHeader";
-import MessageSent from "./MessageSent";
-import OnlineMember from "./OnlineMember";
+import MessageList from "./Message/MessageList";
+import Header from "./Header/ChatHeader";
+import MessageSent from "./Message/MessageSent";
+import OnlineMember from "./Members/OnlineMember";
 import "./MainChat.scss";
 
 
@@ -94,13 +94,14 @@ class Chat extends React.Component {
           member={this.state.member} 
           logout={this.handleOnUserLogout} 
         />
-
          {
             (this.state.member.id) ? 
             (
             <div>
-              
-                 {this.state.members.map((member) => {
+              <div id="active_members">
+                <p id="online">Who is online:</p>
+              <ul>
+               {this.state.members.map((member) => {
               return (
                 <OnlineMember
                   key={member.id}
@@ -109,6 +110,8 @@ class Chat extends React.Component {
                 />
               );
             })}
+            </ul>
+            </div>
               <MessageList
                 messages={this.state.messages}
                 currentMember={this.state.member}

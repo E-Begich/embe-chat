@@ -1,10 +1,21 @@
-
-
 #Home {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#active_members {
+  position: fixed;
+  top: 120px;
+  height: 10%;
+  width: 99%;
+  left: 6px;
+}
+#online {
+  margin: 0;
+  padding: 0;
+
 }
 
 

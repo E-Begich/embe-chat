@@ -1,17 +1,12 @@
 .Messages-list {
-    padding: 10px 0;
-    width: 90%;
- 
-    max-height: 60vh;
-    margin: 0 auto;
-    list-style: none;
-    padding: 10px 20px 60px;
     display: flex;
+    width: 90%;
+    max-height: 55vh;
+    margin: 0 auto;
+    padding: 30px 60px 90px;
+    list-style: none;
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
     position: static;
-    padding: 30px 60px 90px;
-    border: 1px solid black;
-
   }

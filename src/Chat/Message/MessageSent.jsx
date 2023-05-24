@@ -25,20 +25,18 @@ class MessageSent extends React.Component {
   
   render() {
     return (
-      <div className="Input" id='Input2'> 
+      <div id='Input2'> 
         <form className='Send-Message' onSubmit={e => this.onSubmit(e)}>
             <div className="error2">{this.state.error}</div> 
-          <input
-          id='messageText'
-            onChange={e => this.onChange(e)}
-            value={this.state.text}
-            type="text"
-            placeholder="Enter your message..."
-            autoFocus={true}
-          />
-          <button id='buttonSend'>Send</button>
-
-          
+              <input
+                id='messageText'
+                onChange={e => this.onChange(e)}
+                value={this.state.text}
+                type="text"
+                placeholder="Enter your message..."
+                autoFocus={true}
+              />
+                <button id='buttonSend'>Send</button>
         </form>
       </div>
     );
