@@ -8,7 +8,7 @@ function UserLogin({onUserLogin}) {
 
     const handleSubmitMemberName = (e) => {
         e.preventDefault();
-        if (!username || !username.replace(/\s/g, "").length) {
+        if (!username || !username.length) {
             setError("Enter your name!");
           } else {
             setError(null);
